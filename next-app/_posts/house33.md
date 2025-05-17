@@ -5,6 +5,7 @@ image: '/images/house33/img1.jpg'
 highlight_image: '/images/house33/img2.jpg'
 tags: [North York]
 featured: false
+disabled: false
 ---
 
 ![Surfer]({{site.baseurl}}/images/house33/img3.jpg){:loading="lazy"}

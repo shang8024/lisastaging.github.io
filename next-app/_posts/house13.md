@@ -5,6 +5,7 @@ image: '/images/house13/img1.jpg'
 highlight_image: '/images/house13/img2.jpg'
 tags: [Richmond Hill]
 featured: false
+disabled: false
 # video_embed: '/images/house13/00.mp4'
 ---
 

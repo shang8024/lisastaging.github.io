@@ -5,6 +5,7 @@ image: '/images/house50/img1.jpg'
 highlight_image: '/images/house50/img2.jpg'
 tags: [Unionville]
 featured: false
+disabled: false
 ---
 
 ![Surfer]({{site.baseurl}}/images/house50/img3.jpg){:loading="lazy"}

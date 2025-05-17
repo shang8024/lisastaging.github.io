@@ -5,6 +5,7 @@ image: '/images/house69/img1.jpg'
 highlight_image: '/images/house69/img2.jpg'
 tags: [Thornhill]
 featured: false
+disabled: false
 ---
 
 ![Surfer]({{site.baseurl}}/images/house69/img3.jpg){:loading="lazy"}

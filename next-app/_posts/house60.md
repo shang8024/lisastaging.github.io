@@ -5,6 +5,7 @@ image: '/images/house60/img1.jpg'
 highlight_image: '/images/house60/img2.jpg'
 tags: [Woodbridge]
 featured: true
+disabled: false
 ---
 
 ![Surfer]({{site.baseurl}}/images/house60/img3.jpg){:loading="lazy"}

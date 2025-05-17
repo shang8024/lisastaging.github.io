@@ -5,6 +5,7 @@ image: '/images/house48/img1.jpg'
 highlight_image: '/images/house48/img2.jpg'
 tags: [Aurora]
 featured: true
+disabled: false
 ---
 
 ![Surfer]({{site.baseurl}}/images/house48/img3.jpg){:loading="lazy"}

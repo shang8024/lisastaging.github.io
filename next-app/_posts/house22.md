@@ -5,6 +5,7 @@ image: '/images/house22/img1.jpg'
 highlight_image: '/images/house22/img2.jpg'
 tags: [Markham]
 featured: false
+disabled: false
 ---
 
 ![Surfer]({{site.baseurl}}/images/house22/img3.jpg){:loading="lazy"}

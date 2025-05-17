@@ -5,6 +5,7 @@ image: '/images/house45/img1.jpg'
 highlight_image: '/images/house45/img2.jpg'
 tags: [Pickering]
 featured: false
+disabled: false
 ---
 
 ![Surfer]({{site.baseurl}}/images/house45/img3.jpg){:loading="lazy"}

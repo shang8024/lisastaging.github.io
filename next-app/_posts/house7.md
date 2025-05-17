@@ -5,6 +5,7 @@ image: '/images/house7/img1.jpg'
 highlight_image: '/images/house7/img2.jpg'
 tags: [Barrie]
 featured: false
+disabled: false
 # video_embed: '/images/house7/00.mp4'
 ---
 

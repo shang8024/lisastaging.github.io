@@ -5,6 +5,7 @@ image: '/images/house59/img1.jpg'
 highlight_image: '/images/house59/img2.jpg'
 tags: [Barrie]
 featured: false
+disabled: false
 ---
 
 ![Surfer]({{site.baseurl}}/images/house59/img3.jpg){:loading="lazy"}

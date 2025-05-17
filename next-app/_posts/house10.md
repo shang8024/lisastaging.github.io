@@ -5,6 +5,7 @@ image: '/images/house10/img1.jpg'
 highlight_image: '/images/house10/img2.jpg'
 tags: [East Gwillimbury]
 featured: false
+disabled: false
 # video_embed: '/images/house10/00.mp4'
 ---
 

@@ -5,6 +5,7 @@ image: '/images/house47/img1.jpg'
 highlight_image: '/images/house47/img2.jpg'
 tags: [Oshawa]
 featured: false
+disabled: false
 ---
 
 ![Surfer]({{site.baseurl}}/images/house47/img3.jpg){:loading="lazy"}

@@ -5,6 +5,7 @@ image: '/images/house16/img1.jpg'
 highlight_image: '/images/house16/img2.jpg'
 tags: [Richmond Hill]
 featured: false
+disabled: false
 ---
 
 ![Surfer]({{site.baseurl}}/images/house16/img3.jpg){:loading="lazy"}

@@ -5,6 +5,7 @@ image: '/images/house1/img1.jpg'
 highlight_image: '/images/house1/img2.jpg'
 tags: [Barrie]
 featured: false
+disabled: false
 # video_embed: '/images/house1/00.mp4'
 ---
 ![Surfer]({{site.baseurl}}/images/house1/img3.jpg){:loading="lazy"}

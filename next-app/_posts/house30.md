@@ -5,6 +5,7 @@ image: '/images/house30/img1.jpg'
 highlight_image: '/images/house30/img2.jpg'
 tags: [Scarborough]
 featured: false
+disabled: false
 ---
 
 ![Surfer]({{site.baseurl}}/images/house30/img3.jpg){:loading="lazy"}

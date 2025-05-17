@@ -5,6 +5,7 @@ image: '/images/house41/img1.jpg'
 highlight_image: '/images/house41/img2.jpg'
 tags: [East Gwillimbury]
 featured: false
+disabled: false
 ---
 
 ![Surfer]({{site.baseurl}}/images/house41/img3.jpg){:loading="lazy"}

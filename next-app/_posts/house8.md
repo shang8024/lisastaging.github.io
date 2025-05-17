@@ -5,6 +5,7 @@ image: '/images/house8/img1.jpg'
 highlight_image: '/images/house8/img2.jpg'
 tags: [Georgina]
 featured: false
+disabled: false
 # video_embed: '/images/house8/00.mp4'
 ---
 

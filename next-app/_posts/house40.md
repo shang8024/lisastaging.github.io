@@ -5,6 +5,7 @@ image: '/images/house40/img1.jpg'
 highlight_image: '/images/house40/img2.jpg'
 tags: [Mississauga]
 featured: false
+disabled: false
 ---
 
 ![Surfer]({{site.baseurl}}/images/house40/img3.jpg){:loading="lazy"}

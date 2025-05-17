@@ -5,6 +5,7 @@ image: '/images/house32/img1.jpg'
 highlight_image: '/images/house32/img2.jpg'
 tags: [Toronto]
 featured: false
+disabled: false
 ---
 
 ![Surfer]({{site.baseurl}}/images/house32/img3.jpg){:loading="lazy"}

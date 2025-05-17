@@ -5,6 +5,7 @@ image: '/images/house3/img1.jpg'
 highlight_image: '/images/house3/img2.jpg'
 tags: [Oshawa]
 featured: false
+disabled: false
 # video_embed: '/images/house3/00.mp4'
 ---
 ![Surfer]({{site.baseurl}}/images/house3/img3.jpg){:loading="lazy"}

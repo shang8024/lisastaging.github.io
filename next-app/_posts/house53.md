@@ -5,6 +5,7 @@ image: '/images/house53/img1.jpg'
 highlight_image: '/images/house53/img2.jpg'
 tags: [York]
 featured: false
+disabled: false
 ---
 
 ![Surfer]({{site.baseurl}}/images/house53/img3.jpg){:loading="lazy"}

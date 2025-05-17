@@ -5,6 +5,7 @@ image: '/images/house57/img1.jpg'
 highlight_image: '/images/house57/img2.jpg'
 tags: [Georgina]
 featured: false
+disabled: false
 ---
 
 ![Surfer]({{site.baseurl}}/images/house57/img3.jpg){:loading="lazy"}

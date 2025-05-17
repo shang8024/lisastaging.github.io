@@ -5,6 +5,7 @@ image: '/images/house55/img1.jpg'
 highlight_image: '/images/house55/img2.jpg'
 tags: [Toronto]
 featured: false
+disabled: false
 ---
 
 ![Surfer]({{site.baseurl}}/images/house55/img3.jpg){:loading="lazy"}

@@ -5,6 +5,7 @@ image: '/images/house11/img1.jpg'
 highlight_image: '/images/house11/img2.jpg'
 tags: [Aurora]
 featured: false
+disabled: false
 # video_embed: '/images/house11/00.mp4'
 ---
 

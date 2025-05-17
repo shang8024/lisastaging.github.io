@@ -5,6 +5,7 @@ image: '/images/house4/img1.jpg'
 highlight_image: '/images/house4/img2.jpg'
 tags: [Whitby]
 featured: false
+disabled: false
 # video_embed: '/images/house4/00.mp4'
 ---
 ![Surfer]({{site.baseurl}}/images/house4/img3.jpg){:loading="lazy"}

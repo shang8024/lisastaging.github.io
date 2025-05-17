@@ -5,6 +5,7 @@ image: '/images/house21/img1.jpg'
 highlight_image: '/images/house21/img2.jpg'
 tags: [Maple]
 featured: false
+disabled: false
 ---
 
 ![Surfer]({{site.baseurl}}/images/house21/img3.jpg){:loading="lazy"}

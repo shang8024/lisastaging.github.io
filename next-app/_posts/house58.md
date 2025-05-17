@@ -5,6 +5,7 @@ image: '/images/house58/img1.jpg'
 highlight_image: '/images/house58/img2.jpg'
 tags: [Vaughan]
 featured: false
+disabled: false
 ---
 
 ![Surfer]({{site.baseurl}}/images/house58/img3.jpg){:loading="lazy"}

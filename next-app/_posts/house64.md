@@ -5,6 +5,7 @@ image: '/images/house64/img1.jpg'
 highlight_image: '/images/house64/img2.jpg'
 tags: [North York]
 featured: false
+disabled: false
 ---
 
 ![Surfer]({{site.baseurl}}/images/house64/img3.jpg){:loading="lazy"}
