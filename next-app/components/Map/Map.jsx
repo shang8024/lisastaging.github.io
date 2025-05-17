@@ -17,12 +17,14 @@ import Autoplay from "embla-carousel-autoplay"
 let DefaultIcon = L.icon({
     iconUrl: '/images/marker-icon.png',
     shadowUrl: '/images/marker-shadow.png',
+    iconAnchor: [12, 41],
 });
 
 // Create a red icon for the active marker
 let RedIcon = L.icon({
     iconUrl: '/images/marker-icon-red.png',
     shadowUrl: '/images/marker-shadow.png',
+    iconAnchor: [12, 41],
 });
 
 L.Marker.prototype.options.icon = DefaultIcon;
@@ -166,7 +168,7 @@ export default function PostMap({posts}){
         <div className="relative">
           <MapContainer zoom={7} style={{ height: '300px', width: '100%' }} ref={mapRef} zoomSnap={0} className='rounded-xl mb-8'>
             <TileLayer
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
               url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
               minZoom={7}
               className='rounded-xl'
@@ -183,17 +185,22 @@ export default function PostMap({posts}){
                     flyTo([position.lat, position.lng], index);
                   },
                 }}
-              >
-                <Popup>{position.addr}</Popup>
-              </Marker>
+              />
             )}
           </MapContainer>
           
           {/* Marker counter overlay */}
-          <div className="absolute top-4 right-4 bg-white dark:bg-gray-800 px-3 py-1 rounded-full shadow-md z-[1000] flex items-center">
+          <div className="absolute top-1 right-1 bg-white dark:bg-gray-800 px-3 py-1 rounded-full shadow-md z-[1000] flex items-center">
             <span className="text-sm font-medium mr-1">Locations:</span>
             <span className="text-sm font-bold">{positions.length}</span>
           </div>
+          
+          {/* Current address overlay */}
+          {activeMarker !== null && (
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-white dark:bg-gray-800 px-2 py-0.5 rounded-full shadow-md z-[1000] flex items-center">
+              <span className="text-xs font-bold">{positions[activeMarker].addr}</span>
+            </div>
+          )}
         </div>
         <div className='max-w-vw justify-center items-center flex mb- md:mb-8 w-full'>
           <Carousel setApi={setApi} className="w-[calc(100vw-28px)] lg:w-[900px] max-w-[calc(100vw-28px)] "
