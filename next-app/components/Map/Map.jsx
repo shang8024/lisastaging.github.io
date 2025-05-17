@@ -166,7 +166,7 @@ export default function PostMap({posts}){
     <div className="container h-fit w-full max-w-sceen">
       <div className="w-full mb-10">
         <div className="relative">
-          <MapContainer zoom={7} style={{ height: '300px', width: '100%' }} ref={mapRef} zoomSnap={0} className='rounded-xl mb-8'>
+          <MapContainer zoom={7} style={{ height: '200px', width: '100%' }} ref={mapRef} zoomSnap={0} className='rounded-xl mb-4'>
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
               url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
