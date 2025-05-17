@@ -23,7 +23,7 @@ export default async function HousePage({ params }: { params: Promise<{ houseId:
     if (post.disabled === true) {
       notFound();
     }
-  } catch (_) {
+  } catch {
     notFound();
   }
   
