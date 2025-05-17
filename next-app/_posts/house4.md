@@ -1,13 +1,9 @@
 ---
 layout: post
-title: anonymous4
-description: Markham Project
 date: 2021-11-06 15:01:35 +0300
-author: lisa
 image: '/images/house4/img1.jpg'
-image_caption: ' '
 highlight_image: '/images/house4/img2.jpg'
-tags: [Thornhill]
+tags: [Whitby]
 featured: true
 # video_embed: '/images/house4/00.mp4'
 ---

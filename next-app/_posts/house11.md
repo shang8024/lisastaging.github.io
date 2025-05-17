@@ -1,13 +1,9 @@
 ---
 layout: post
-title: anonymous11
-description: Markham Project
 date: 2021-11-06 15:01:35 +0300
-author: lisa
 image: '/images/house11/img1.jpg'
-image_caption: ' '
 highlight_image: '/images/house11/img2.jpg'
-tags: [Markham]
+tags: [Aurora]
 featured: true
 # video_embed: '/images/house11/00.mp4'
 ---
