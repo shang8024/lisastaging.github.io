@@ -1,4 +1,3 @@
-
 import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
@@ -8,7 +7,16 @@ import html from 'remark-html';
 // Your markdown folder for posts.
 const postsDirectory = path.join(process.cwd(), '/_posts');
 
-export async function getPostbyId(id: string){
+// Define Post type with optional disabled field
+interface Post {
+  id: string;
+  contentHtml: string;
+  disabled?: boolean;
+  featured?: boolean;
+  [key: string]: any;
+}
+
+export async function getPostbyId(id: string): Promise<Post>{
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
@@ -28,7 +36,7 @@ export async function getPostbyId(id: string){
   };
 }
 
-export async function getAllPosts() {
+export async function getAllPosts(): Promise<Post[]> {
     const files = fs.readdirSync(postsDirectory);
 
     const posts = await Promise.all(
@@ -37,5 +45,9 @@ export async function getAllPosts() {
         return getPostbyId(id);
       })
     );
-    return posts;
+    
+    // Filter out posts with disabled: true
+    const filteredPosts = posts.filter(post => post.disabled !== true);
+    
+    return filteredPosts;
 }

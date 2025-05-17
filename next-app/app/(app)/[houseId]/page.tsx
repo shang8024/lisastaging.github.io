@@ -1,16 +1,32 @@
-
 import fs from 'fs';
 import path from 'path';
 import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
 import {HouseGallery, HouseGallerySkeleton} from '@/components/HouseCard/HouseGallery';
+import { getPostbyId, getAllPosts } from '@/lib/posts';
 // const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+
 export async function generateStaticParams() {
-  const list = Array.from({ length: 17 }, (_, i) => ({ houseId: `house${i + 1}` }));
-  return list;
+  // Get all non-disabled posts
+  const posts = await getAllPosts();
+  return posts.map(post => ({
+    houseId: post.id
+  }));
 }
+
 export default async function HousePage({ params }: { params: Promise<{ houseId: string }> }) {
   const {houseId} = await params;
+  
+  // Check if the post is disabled
+  try {
+    const post = await getPostbyId(houseId);
+    if (post.disabled === true) {
+      notFound();
+    }
+  } catch (error) {
+    notFound();
+  }
+  
   const filePath = path.join(process.cwd(), 'public', 'images', houseId, 'meta.json');
 
   if (!fs.existsSync(filePath)) {
