@@ -7,13 +7,20 @@ import html from 'remark-html';
 // Your markdown folder for posts.
 const postsDirectory = path.join(process.cwd(), '/_posts');
 
-// Define Post type with optional disabled field
+// Define Post type with optional disabled field and metadata fields
 interface Post {
   id: string;
   contentHtml: string;
   disabled?: boolean;
   featured?: boolean;
-  [key: string]: any;
+  highlight_image?: string;
+  image?: string;
+  tags?: string[];
+  text?: string;
+  layout?: string;
+  date?: string;
+  video_embed?: string;
+  [key: string]: string | boolean | string[] | undefined;
 }
 
 export async function getPostbyId(id: string): Promise<Post>{
