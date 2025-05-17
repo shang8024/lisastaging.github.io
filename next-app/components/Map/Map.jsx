@@ -18,6 +18,13 @@ let DefaultIcon = L.icon({
     iconUrl: '/images/marker-icon.png',
     shadowUrl: '/images/marker-shadow.png',
 });
+
+// Create a red icon for the active marker
+let RedIcon = L.icon({
+    iconUrl: '/images/marker-icon-red.png',
+    shadowUrl: '/images/marker-shadow.png',
+});
+
 L.Marker.prototype.options.icon = DefaultIcon;
 
 const positions = [ 
@@ -106,6 +113,7 @@ const contactPost = {
 export default function PostMap({posts}){
   const [api, setApi] = useState();
   const mapRef = useRef(null);
+  const [activeMarker, setActiveMarker] = useState(null);
 
   const scrollTo = (index) => {
     if (!api) return;
@@ -118,10 +126,11 @@ export default function PostMap({posts}){
     }
   }
 
-  const flyTo = (pos) => {
-    mapRef.current.flyTo(pos,10, {
-      animate:true,
-      duration:0.3
+  const flyTo = (pos, index) => {
+    setActiveMarker(index);
+    mapRef.current.flyTo(pos, 10, {
+      animate: true,
+      duration: 0.3
     });
   }
 
@@ -146,7 +155,7 @@ export default function PostMap({posts}){
         if(index === posts.length) return;
         var mapIndex = positions.findIndex((pos) => `house${pos?.id}` === posts[index].id);
         if (mapIndex != -1){
-          flyTo([positions[mapIndex].lat,positions[mapIndex].lng]);
+          flyTo([positions[mapIndex].lat,positions[mapIndex].lng], mapIndex);
         }
     })
   },[api]);
@@ -154,27 +163,38 @@ export default function PostMap({posts}){
   return (
     <div className="container h-fit w-full max-w-sceen">
       <div className="w-full mb-10">
-        <MapContainer zoom={7} style={{ height: '300px', width: '100%' }} ref={mapRef} zoomSnap={0} className='rounded-xl mb-8'>
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
-            minZoom={7}
-            className='rounded-xl'
-            style={{ borderRadius: '1rem' }}
-          />
-          {positions.map((position,index) => 
-            <Marker key={position.id} position={[position.lat,position.lng]}
-              eventHandlers={{
-                click: () => {
-                  scrollTo(index);
-                  flyTo([position.lat,position.lng]);
-                },
-              }}
-            >
-              <Popup>{position.addr}</Popup>
-            </Marker>
-          )}
-        </MapContainer>
+        <div className="relative">
+          <MapContainer zoom={7} style={{ height: '300px', width: '100%' }} ref={mapRef} zoomSnap={0} className='rounded-xl mb-8'>
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+              minZoom={7}
+              className='rounded-xl'
+              style={{ borderRadius: '1rem' }}
+            />
+            {positions.map((position, index) => 
+              <Marker 
+                key={position.id} 
+                position={[position.lat, position.lng]}
+                icon={activeMarker === index ? RedIcon : DefaultIcon}
+                eventHandlers={{
+                  click: () => {
+                    scrollTo(index);
+                    flyTo([position.lat, position.lng], index);
+                  },
+                }}
+              >
+                <Popup>{position.addr}</Popup>
+              </Marker>
+            )}
+          </MapContainer>
+          
+          {/* Marker counter overlay */}
+          <div className="absolute top-4 right-4 bg-white dark:bg-gray-800 px-3 py-1 rounded-full shadow-md z-[1000] flex items-center">
+            <span className="text-sm font-medium mr-1">Locations:</span>
+            <span className="text-sm font-bold">{positions.length}</span>
+          </div>
+        </div>
         <div className='max-w-vw justify-center items-center flex mb- md:mb-8 w-full'>
           <Carousel setApi={setApi} className="w-[calc(100vw-28px)] lg:w-[900px] max-w-[calc(100vw-28px)] "
             // plugins={[
