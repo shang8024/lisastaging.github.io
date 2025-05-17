@@ -1,4 +1,3 @@
-
 'use client'
 import '../hero.scss'
 import React, { useEffect, useRef,useState } from 'react';
@@ -155,29 +154,7 @@ export default function PostMap({posts}){
   return (
     <div className="container h-fit w-full max-w-sceen">
       <div className="w-full mb-10">
-        <div className='max-w-vw justify-center items-center flex mb- md:mb-8 w-full'>
-          <Carousel setApi={setApi} className="w-[calc(100vw-28px) lg:w-[900px] max-w-[calc(100vw-28px)] "
-            // plugins={[
-            //   Autoplay({
-            //     delay: 5000,
-            //   }),
-            // ]}
-          >
-            <CarouselContent className='-ml-1'>
-              {posts.map((post, index) => (
-                <CarouselItem key={index} className="basis-1/1 sm:basis-1/2 lg:basis-1/3 pl-1">
-                  <CardDemo post={post}/>
-                </CarouselItem>
-              ))}
-              <CarouselItem key={-1} className="sm:basis-1/2 lg:basis-1/3 pl-1">
-                <CardDemo post={contactPost}/>
-              </CarouselItem>
-            </CarouselContent>
-            <CarouselPrevious className='left-0' />
-            <CarouselNext className='right-0'/>
-          </Carousel> 
-        </div>
-        <MapContainer zoom={7} style={{ height: '300px', width: '100%' }} ref={mapRef} zoomSnap={0} className='rounded-xl'>
+        <MapContainer zoom={7} style={{ height: '300px', width: '100%' }} ref={mapRef} zoomSnap={0} className='rounded-xl mb-8'>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -198,6 +175,28 @@ export default function PostMap({posts}){
             </Marker>
           )}
         </MapContainer>
+        <div className='max-w-vw justify-center items-center flex mb- md:mb-8 w-full'>
+          <Carousel setApi={setApi} className="w-[calc(100vw-28px)] lg:w-[900px] max-w-[calc(100vw-28px)] "
+            // plugins={[
+            //   Autoplay({
+            //     delay: 5000,
+            //   }),
+            // ]}
+          >
+            <CarouselContent className='-ml-1'>
+              {posts.map((post, index) => (
+                <CarouselItem key={index} className="basis-1/1 sm:basis-1/2 lg:basis-1/3 pl-1">
+                  <CardDemo post={post}/>
+                </CarouselItem>
+              ))}
+              <CarouselItem key={-1} className="sm:basis-1/2 lg:basis-1/3 pl-1">
+                <CardDemo post={contactPost}/>
+              </CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious className='left-0' />
+            <CarouselNext className='right-0'/>
+          </Carousel> 
+        </div>
       </div>
     </div>
   )
