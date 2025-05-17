@@ -29,7 +29,7 @@ let RedIcon = L.icon({
 
 L.Marker.prototype.options.icon = DefaultIcon;
 
-const positions = [ 
+const allPositions = [ 
   {id: 1, lat: 44.408022222452196, lng: -79.6579432075455, addr: "xx Corbett Dr"}, 
   {id: 2, lat: 43.927568830751916, lng: -78.84555030474665, addr: "xx Bennett Crescent"}, 
   {id: 3, lat: 43.901028488685085, lng: -78.88223774817386, addr: "xx Madison Ave"}, 
@@ -116,6 +116,8 @@ export default function PostMap({posts}){
   const [api, setApi] = useState();
   const mapRef = useRef(null);
   const [activeMarker, setActiveMarker] = useState(null);
+  const featuredPosts = posts.filter(post => post.featured === true);
+  const positions = allPositions.filter(pos => posts.some(post => post.id === `house${pos.id}`));
 
   const scrollTo = (index) => {
     if (!api) return;
@@ -211,7 +213,7 @@ export default function PostMap({posts}){
             // ]}
           >
             <CarouselContent className='-ml-1'>
-              {posts.map((post, index) => (
+              {featuredPosts.map((post, index) => (
                 <CarouselItem key={index} className="basis-1/1 sm:basis-1/2 lg:basis-1/3 pl-1">
                   <CardDemo post={post}/>
                 </CarouselItem>
