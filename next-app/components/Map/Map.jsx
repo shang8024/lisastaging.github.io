@@ -116,7 +116,8 @@ export default function PostMap({posts}){
   const [api, setApi] = useState();
   const mapRef = useRef(null);
   const [activeMarker, setActiveMarker] = useState(null);
-  const featuredPosts = posts.filter(post => post.featured === true);
+  // const featuredPosts = posts.filter(post => post.featured === true);
+  const allPosts = posts.filter(post => post.disabled === false);
   const positions = allPositions.filter(pos => posts.some(post => post.id === `house${pos.id}`));
 
   const scrollTo = (index) => {
@@ -213,7 +214,7 @@ export default function PostMap({posts}){
             // ]}
           >
             <CarouselContent className='-ml-1'>
-              {featuredPosts.map((post, index) => (
+              {allPosts.map((post, index) => (
                 <CarouselItem key={index} className="basis-1/1 sm:basis-1/2 lg:basis-1/3 pl-1">
                   <CardDemo post={post}/>
                 </CarouselItem>
