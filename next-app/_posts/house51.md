@@ -1,8 +1,8 @@
 ---
 layout: post
 date: 2021-11-06 15:01:35 +0300
-image: '/images/house51/img1.jpg'
-highlight_image: '/images/house51/img2.jpg'
+image: '/images/house51/img0.jpg'
+highlight_image: '/images/house51/img1.jpg'
 tags: [Scarborough]
 featured: false
 disabled: false

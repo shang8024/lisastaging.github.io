@@ -1,11 +1,11 @@
 ---
 layout: post
 date: 2021-11-06 15:01:35 +0300
-image: '/images/house10/img1.jpg'
-highlight_image: '/images/house10/img2.jpg'
+image: '/images/house10/img0.jpg'
+highlight_image: '/images/house10/img1.jpg'
 tags: [East Gwillimbury]
 featured: false
-disabled: false
+disabled: true
 # video_embed: '/images/house10/00.mp4'
 ---
 

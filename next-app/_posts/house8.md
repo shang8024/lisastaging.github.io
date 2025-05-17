@@ -1,11 +1,11 @@
 ---
 layout: post
 date: 2021-11-06 15:01:35 +0300
-image: '/images/house8/img1.jpg'
-highlight_image: '/images/house8/img2.jpg'
+image: '/images/house8/img0.jpg'
+highlight_image: '/images/house8/img1.jpg'
 tags: [Georgina]
 featured: false
-disabled: false
+disabled: true
 # video_embed: '/images/house8/00.mp4'
 ---
 

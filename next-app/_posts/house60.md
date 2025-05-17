@@ -1,8 +1,8 @@
 ---
 layout: post
 date: 2021-11-06 15:01:35 +0300
-image: '/images/house60/img1.jpg'
-highlight_image: '/images/house60/img2.jpg'
+image: '/images/house60/img0.jpg'
+highlight_image: '/images/house60/img1.jpg'
 tags: [Woodbridge]
 featured: true
 disabled: false
