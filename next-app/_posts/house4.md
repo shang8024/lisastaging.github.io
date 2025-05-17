@@ -4,7 +4,7 @@ date: 2021-11-06 15:01:35 +0300
 image: '/images/house4/img1.jpg'
 highlight_image: '/images/house4/img2.jpg'
 tags: [Whitby]
-featured: true
+featured: false
 # video_embed: '/images/house4/00.mp4'
 ---
 ![Surfer]({{site.baseurl}}/images/house4/img3.jpg){:loading="lazy"}

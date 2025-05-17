@@ -4,7 +4,7 @@ date: 2021-11-06 15:01:35 +0300
 image: '/images/house36/img1.jpg'
 highlight_image: '/images/house36/img2.jpg'
 tags: [Toronto]
-featured: true
+featured: false
 ---
 
 ![Surfer]({{site.baseurl}}/images/house36/img3.jpg){:loading="lazy"}

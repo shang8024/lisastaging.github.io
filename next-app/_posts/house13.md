@@ -4,7 +4,7 @@ date: 2021-11-06 15:01:35 +0300
 image: '/images/house13/img1.jpg'
 highlight_image: '/images/house13/img2.jpg'
 tags: [Richmond Hill]
-featured: true
+featured: false
 # video_embed: '/images/house13/00.mp4'
 ---
 

@@ -4,7 +4,7 @@ date: 2021-11-06 15:01:35 +0300
 image: '/images/house22/img1.jpg'
 highlight_image: '/images/house22/img2.jpg'
 tags: [Markham]
-featured: true
+featured: false
 ---
 
 ![Surfer]({{site.baseurl}}/images/house22/img3.jpg){:loading="lazy"}

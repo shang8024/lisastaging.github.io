@@ -4,7 +4,7 @@ date: 2021-11-06 15:01:35 +0300
 image: '/images/house67/img1.jpg'
 highlight_image: '/images/house67/img2.jpg'
 tags: [Thornhill]
-featured: true
+featured: false
 ---
 
 ![Surfer]({{site.baseurl}}/images/house67/img3.jpg){:loading="lazy"}

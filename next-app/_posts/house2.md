@@ -4,7 +4,7 @@ date: 2021-11-06 15:01:35 +0300
 image: '/images/house2/img1.jpg'
 highlight_image: '/images/house2/img2.jpg'
 tags: [Oshawa]
-featured: true
+featured: false
 ---
 ![Surfer]({{site.baseurl}}/images/house2/img3.jpg){:loading="lazy"}
 ![Surfer]({{site.baseurl}}/images/house2/img4.jpg){:loading="lazy"}
