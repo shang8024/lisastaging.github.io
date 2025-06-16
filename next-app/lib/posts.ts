@@ -56,5 +56,15 @@ export async function getAllPosts(): Promise<Post[]> {
     // Filter out posts with disabled: true
     const filteredPosts = posts.filter(post => post.disabled !== true);
     
-    return filteredPosts;
+    // Sort posts: featured first, then by date (newest first)
+    return filteredPosts.sort((a, b) => {
+      // First sort by featured status
+      if (a.featured && !b.featured) return -1;
+      if (!a.featured && b.featured) return 1;
+      
+      // If featured status is the same, sort by date
+      const dateA = a.date ? new Date(a.date).getTime() : 0;
+      const dateB = b.date ? new Date(b.date).getTime() : 0;
+      return dateB - dateA;
+    });
 }
