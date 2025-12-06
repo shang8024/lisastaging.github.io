@@ -5,7 +5,7 @@ import { SparklesText } from "./magicui/sparkles-text"
 const footerInfo = {
   logo: "/images/logo.png",
   website: "https://lisastaging.com/",
-  email: "ssgsaa@gmail.com",
+  email: "ssgxaa@gmail.com",
   phone: {
     english: "647-571-1788",
     mandarin: "416-939-3962",

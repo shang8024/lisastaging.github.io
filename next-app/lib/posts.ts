@@ -1,4 +1,3 @@
-
 import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
@@ -8,7 +7,23 @@ import html from 'remark-html';
 // Your markdown folder for posts.
 const postsDirectory = path.join(process.cwd(), '/_posts');
 
-export async function getPostbyId(id: string){
+// Define Post type with optional disabled field and metadata fields
+interface Post {
+  id: string;
+  contentHtml: string;
+  disabled?: boolean;
+  featured?: boolean;
+  highlight_image?: string;
+  image?: string;
+  tags?: string[];
+  text?: string;
+  layout?: string;
+  date?: string;
+  video_embed?: string;
+  [key: string]: string | boolean | string[] | undefined;
+}
+
+export async function getPostbyId(id: string): Promise<Post>{
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
@@ -28,7 +43,7 @@ export async function getPostbyId(id: string){
   };
 }
 
-export async function getAllPosts() {
+export async function getAllPosts(): Promise<Post[]> {
     const files = fs.readdirSync(postsDirectory);
 
     const posts = await Promise.all(
@@ -37,5 +52,19 @@ export async function getAllPosts() {
         return getPostbyId(id);
       })
     );
-    return posts;
+    
+    // Filter out posts with disabled: true
+    const filteredPosts = posts.filter(post => post.disabled !== true);
+    
+    // Sort posts: featured first, then by date (newest first)
+    return filteredPosts.sort((a, b) => {
+      // First sort by featured status
+      if (a.featured && !b.featured) return -1;
+      if (!a.featured && b.featured) return 1;
+      
+      // If featured status is the same, sort by date
+      const dateA = a.date ? new Date(a.date).getTime() : 0;
+      const dateB = b.date ? new Date(b.date).getTime() : 0;
+      return dateB - dateA;
+    });
 }

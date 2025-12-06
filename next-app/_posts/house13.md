@@ -1,14 +1,11 @@
 ---
 layout: post
-title: anonymous13
-description: Markham Project
 date: 2021-11-06 15:01:35 +0300
-author: lisa
-image: '/images/house13/img1.jpg'
-image_caption: ' '
-highlight_image: '/images/house13/img2.jpg'
-tags: [Aurora]
-featured: true
+image: '/images/house13/img0.jpg'
+highlight_image: '/images/house13/img1.jpg'
+tags: [Richmond Hill]
+featured: false
+disabled: false
 # video_embed: '/images/house13/00.mp4'
 ---
 

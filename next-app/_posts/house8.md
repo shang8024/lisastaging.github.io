@@ -1,14 +1,11 @@
 ---
 layout: post
-title: anonymous8
-description: Markham Project
 date: 2021-11-06 15:01:35 +0300
-author: lisa
-image: '/images/house8/img1.jpg'
-image_caption: ''
-highlight_image: '/images/house8/img2.jpg'
-tags: [Markham]
-featured: true
+image: '/images/house8/img0.jpg'
+highlight_image: '/images/house8/img1.jpg'
+tags: [Georgina]
+featured: false
+disabled: true
 # video_embed: '/images/house8/00.mp4'
 ---
 
