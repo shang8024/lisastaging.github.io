@@ -33,7 +33,7 @@
     "leaflet": "^1.9.4",
     "lucide-react": "^0.507.0",
     "motion": "^12.10.2",
-    "next": "15.3.6",
+    "next": "15.3.8",
     "next-image-export-optimizer": "^1.19.0",
     "path": "^0.12.7",
     "postcss": "^8.5.3",
